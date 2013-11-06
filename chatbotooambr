@@ -691,11 +691,12 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg1;
-       msg1 = "1) Tempo máximo 6 min e 30 seg. ";
+       msg1 = "1) Tempo máximo 5 min e 30 seg. ";
       msg1 += "2) Não escrever em /me ou /em.  ";
       msg1 += "3) Respeitar os moderadores da sala.";
       msg1 += "4) Sem flood no chat . ";
       msg1 += "5) Não fique pedindo cargos , não pedir fans. ";
+      msg1 += "6) Não divulge outras salas. ";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
