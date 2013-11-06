@@ -54,12 +54,12 @@
     settings.prototype.totalVotingData = {
       woots: 0,
       mehs: 0,
-      curates:
+      curates: 0
     };
 
     settings.prototype.pupScriptUrl = 'https://raw.github.com/mattllyn/CHATBOTOOAMBR/master/chatbotooambr';
 
-    settings.prototype.afkTime = 8 * 60 * 1000;
+    settings.prototype.afkTime = 15 * 60 * 1000;
 
     settings.prototype.songIntervalMessages = [
       {
@@ -69,11 +69,11 @@
       },{
         interval: 5,
         offset: 0,
-        msg: "/em: Make sure that you're voting or you will be removed from the wait list and from the DJ Booth."
+        msg: "/em: Entre no nosso grupo do facebook e fique por dentro de todas as nossas atualizações: https://www.facebook.com/groups/1411339282428769/"
       },{
         interval: 9,
         offset: 0,
-        msg: "/em: Entre no nosso grupo do facebook e fique por dentro de todas as nossas atualizações: https://www.facebook.com/groups/1411339282428769/"
+        msg: "/me Toda a equipe OOAM-BR agradece sua presença, continue entrando em nossa sala... Divirta-se!"
       }
     ];
 
@@ -349,7 +349,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("/me: CHATBOT OOAM-BR LOADED!");
+    return API.sendChat("/me: OOAM-BR BOT LOADED!");
   };
 
   populateUserData = function() {
@@ -627,14 +627,14 @@
     }
 
     whyWootCommand.prototype.init = function() {
-      this.command = '!gustavo';
+      this.command = '!brutos';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
 
     whyWootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Se tu não entrar na linha, vai tomar um ban!";;
+      msg = "lindão vlw flw!";;
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -662,10 +662,10 @@
 
     themeCommand.prototype.functionality = function() {
       var msg1;
-      msg1 = "Todo tipo de AMV de boa qualidade é permitida aqui. Electro, Rock, ";
+      msg1 = "Todo tipo AMV de boa qualidade é permitida aqui. Incluindo Electro, Rock, Techno, Trap, EDM, ";
       msg1 += "Hardstyle, House e Trance. ";
       API.sendChat(msg1);
-          return setTimeout((function() {
+	  return setTimeout((function() {
         return API.sendChat(msg2);
       }), 750);
 
@@ -691,11 +691,11 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg1;
-       msg1 = "1) Tempo máximo 5 min e 30 seg. ";
+       msg1 = "1) Tempo máximo 6 min e 30 seg. ";
       msg1 += "2) Não escrever em /me ou /em.  ";
       msg1 += "3) Respeitar os moderadores da sala.";
       msg1 += "4) Sem flood no chat . ";
-      msg1 += "5) Não fique pedindo cargos. ";
+      msg1 += "5) Não fique pedindo cargos , não pedir fans. ";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
@@ -722,7 +722,7 @@
 
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
-      msg1 = "Bem vindo a sala OOAM - BR! Ser DJ: Crie uma lista de reprodução e coloque Musica do Youtube ou soundcloud. ";
+      msg1 = "Bem vindo a sala OOAM BR! Ser DJ: Crie uma lista de reprodução e coloque Musica do Youtube ou soundcloud. ";
       msg1 += "Se é novo procure pelo seu nome na sua tela (próximo a cabine do DJ) e depois mude o nome. ";
       msg1 += "Para Ganhar Pontos clique em Bacana. ";
       msg2 = "Divirta-se! Qualquer outra duvida chame um adm da sala ";
@@ -752,7 +752,7 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-      msg = ' BOT criado por Backus e editado pela equipe OOAM-BR)';
+      msg = ' BOT criado por Backus e editado por brutos para a Electro, Trap e Dubstep Brasil ';
       return API.sendChat(msg);
     };
 
@@ -776,7 +776,7 @@
 
     wootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://plugcubed.net/";
+      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. plugcubed.net";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -828,8 +828,8 @@
 
     downloadCommand.prototype.functionality = function() {
       var msg;
-      msg = " Participe do nosso grupo";
-      msg += "1) https://www.facebook.com/groups/1411339282428769 , ";
+      msg = "  Participe do grupo no facebook ";
+      msg += "https://www.facebook.com/groups/1411339282428769/ ";
       return API.sendChat(msg);
     };
 
@@ -859,7 +859,7 @@
         dj = djs[_i];
         now = new Date();
         djAfk = now.getTime() - data.users[dj.id].getLastActivity().getTime();
-        if (djAfk > (10 * 60 * 1000)) {
+        if (djAfk > (4 * 60 * 1000)) {
           if (msToStr(djAfk) !== false) {
             msg += dj.username + ' - ' + msToStr(djAfk);
             msg += '. ';
@@ -1095,7 +1095,7 @@
 
     return removeCommand;
 
-         })(Command);
+	 })(Command);
 
   staffCommand = (function(_super) {
     __extends(staffCommand, _super);
@@ -1178,7 +1178,7 @@
 
     return lockskipCommand;
 
-         })(Command);
+	 })(Command);
 
   addCommand = (function(_super) {
     __extends(addCommand, _super);
@@ -1785,7 +1785,7 @@
       sender = API.getUser(chat.fromID);
       if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
         if (!data.users[chat.fromID]["protected"]) {
-          API.sendChat("Sem spam");
+          API.sendChat("Sem divulgar outras salas vlw flw!!!");
           return API.moderateDeleteChat(chat.chatID);
         } else {
           return API.sendChat("Eu deveria expulsa-lo, mas estamos aqui para nos divertir");
