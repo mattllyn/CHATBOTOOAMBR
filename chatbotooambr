@@ -627,7 +627,7 @@
     }
 
     whyWootCommand.prototype.init = function() {
-      this.command = '!brutos';
+      this.command = '!mattgostoso';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'featured';
     };
@@ -697,6 +697,7 @@
       msg1 += "4) Sem flood no chat . ";
       msg1 += "5) Não fique pedindo cargos , não pedir fans. ";
       msg1 += "6) Não divulge outras salas. ";
+      msg1 += "7) Não mendigue fãs. ";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
