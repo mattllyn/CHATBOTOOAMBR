@@ -349,7 +349,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("/me: OOAM-BR BOT LOADED!");
+    return API.sendChat("/me: :star: [OOAM]BOT CARREGADO COM ÊXITO!");
   };
 
   populateUserData = function() {
@@ -662,8 +662,7 @@
 
     themeCommand.prototype.functionality = function() {
       var msg1;
-      msg1 = "Todo tipo AMV de boa qualidade é permitida aqui. Incluindo Electro, Rock, Techno, Trap, EDM, ";
-      msg1 += "Hardstyle, House e Trance. ";
+      msg1 = "Temas permitidos: AMV, K-pop, J-Music, Games Music, Electro e Rock. ";
       API.sendChat(msg1);
 	  return setTimeout((function() {
         return API.sendChat(msg2);
@@ -691,13 +690,13 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg1;
-       msg1 = "1) Tempo máximo 5 min e 30 seg. ";
-      msg1 += "2) Não escrever em /me ou /em.  ";
-      msg1 += "3) Respeitar os moderadores da sala.";
-      msg1 += "4) Sem flood no chat . ";
-      msg1 += "5) Não fique pedindo cargos , não pedir fans. ";
-      msg1 += "6) Não divulge outras salas. ";
-      msg1 += "7) Não mendigue fãs. ";
+       msg1 = "NO FAN 4 FAN.";
+      msg1 += "1)Tempo máximo 5 minutos e 50 segundos.";
+      msg1 += "2)Não escrever em /me ou /em (mensagem amarela).";
+      msg1 += "3)Respeitar os moderadores e os demais players da sala.";
+      msg1 += "4)Sem Flood no chat.";
+      msg1 += "5)Não fique pedindo cargos.";
+      msg1 += "6)Não divulgue links de outras salas.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
