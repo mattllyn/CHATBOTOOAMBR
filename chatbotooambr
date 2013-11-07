@@ -740,14 +740,14 @@
     };
 
     rulesCommand.prototype.functionality = function() {
-      var msg1;
+      var msg1, msg2;
       msg1 = "1)Tempo máximo 5 minutos e 50 segundos.";
       msg1 += "2)Não escrever em /me ou /em (mensagem amarela).";
       msg1 += "3)Respeitar os moderadores e os demais players da sala.";
       msg1 += "4)Sem Flood no chat, sem FAN 4 FAN.";
       msg1 += "5)Não fique pedindo cargos.";
-      msg1 += "6)Ecchi liberado apenas depois da 00:00 (meia noite).";
-      msg1 += "7)Não divulgue links de outras salas.";
+      msg2 = "6)Ecchi liberado apenas depois da 00:00 (meia noite).";
+      msg2 += "7)Não divulgue links de outras salas.";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
