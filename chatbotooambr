@@ -833,7 +833,7 @@
 
     wootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. plugcubed.net";
+      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://migre.me/gA5xV";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
