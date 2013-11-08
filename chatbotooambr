@@ -390,11 +390,16 @@
         if (user.getIsDj()) {
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
+            user.warn();
+            _results.push(API.sendChat("@" + user.getUser().username + ", Eu não vi você votar durante 30 minutos.  Vote nos próximos 2 minutos, se não será removido."));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
             twoMinutes = 2 * 60 * 1000;
             if (timeSinceLastWarning > twoMinutes) {
+              user.warn();
+              warnMsg = "@" + user.getUser().username;
+              warnMsg += ", Eu não vi você votar durante 32 minutos. Vote no próximo minuto ou eu o removerei, este é seu ultimo aviso.";
               _results.push(API.sendChat(warnMsg));
             } else {
               _results.push(void 0);
@@ -406,7 +411,7 @@
             if (timeSinceLastWarning > oneMinute) {
               DJs = API.getDJs();
               if (DJs.length > 0 && DJs[0].id !== user.getUser().id) {
-                API.sendChat("@" + user.getUser().username + ", Você ficou muito tempo sem votar. Por favor, mantenha-se sempre votando.");
+                API.sendChat("@" + user.getUser().username + ", Você teve 2 avisos. Por favor, mantenha-se sempre votando.");
                 API.moderateRemoveDJ(id);
                 _results.push(user.warn());
               } else {
