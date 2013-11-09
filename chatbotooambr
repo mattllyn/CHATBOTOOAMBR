@@ -370,7 +370,7 @@
 API.on(API.USER_JOIN, callback);
 function callback(user)
 {
-API.sendChat(user.username + "Bem-vindo a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."); 
+API.sendChat("@" + user.getUser().username + ", Bem-vindo a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."); 
 }
 
   initialize = function() {
