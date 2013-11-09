@@ -370,7 +370,7 @@
 API.on(API.USER_JOIN, callback);
 function callback(user)
 {
-API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."); 
+API.sendChat("Bem-vindo @" + user.username + " toque apenas músicas com no máximo 6 minutos. Os temas permitidos são: AMV, K-pop, J-Music, vocaloid, Games Music, Electro e Rock. Siga as regras, e não tenha problemas com nenhum administrador. Divirta-se!"); 
 }
 
   initialize = function() {
@@ -719,7 +719,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     themeCommand.prototype.init = function() {
       this.command = '!temas';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     themeCommand.prototype.functionality = function() {
@@ -802,7 +802,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     theme2Command.prototype.init = function() {
       this.command = '!themes';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     theme2Command.prototype.functionality = function() {
@@ -830,7 +830,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     rulesCommand.prototype.init = function() {
       this.command = '!regras';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     rulesCommand.prototype.functionality = function() {
@@ -863,7 +863,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     rules2Command.prototype.init = function() {
       this.command = '!rules';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     rules2Command.prototype.functionality = function() {
@@ -896,7 +896,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     roomHelpCommand.prototype.init = function() {
       this.command = '!ajuda';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     roomHelpCommand.prototype.functionality = function() {
@@ -929,7 +929,7 @@ API.sendChat("@" + user.username + " Bem-vindo a sala OOAM-BR, para obter ajuda 
     roomHelp2Command.prototype.init = function() {
       this.command = '!help';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'user';
+      return this.rankPrivelege = 'featured';
     };
 
     roomHelp2Command.prototype.functionality = function() {
