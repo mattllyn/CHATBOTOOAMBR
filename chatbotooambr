@@ -367,10 +367,10 @@
     return document.getElementById("button-sound").click();
   };
 
-API.on(event, callback);
+API.on(API.USER_JOIN, callback);
 function callback(user)
 {
-sendChat("Bem-vindo @" +user.getUser().username + " a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.");
+API.sendChat("Bem-vindo @" +user.getUser().username + " a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.");
 }
 
   initialize = function() {
