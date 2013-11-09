@@ -73,7 +73,7 @@
       },{
         interval: 9,
         offset: 0,
-        msg: "/me Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://migre.me/gA5xV !"
+        msg: "/me Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://goo.gl/YcXZLw !"
       }
     ];
 
@@ -845,7 +845,7 @@
       msg1 += "Para Ganhar Pontos clique em Bacana. ";
       msg2 = "Para ver os temas permitidos digite: !temas. ";
       msg2 += "Para evitar ser removido da cabine de DJ's por não estar votando, use o Auto-Bacana. ";
-      msg2 += "Tutorial: http://migre.me/gA5xV ";
+      msg2 += "Tutorial: http://goo.gl/YcXZLw ";
       msg2 += "Divirta-se! Qualquer outra duvida chame um adm da sala.";
       API.sendChat(msg1);
       return setTimeout((function() {
@@ -929,7 +929,7 @@
 
     wootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://migre.me/gA5xV";
+      msg = "Use o auto woot para evitar remoção da cabine de DJ por não estar votando. http://goo.gl/YcXZLw";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
