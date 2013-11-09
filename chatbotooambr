@@ -377,6 +377,12 @@
     return data.startAfkInterval();
   };
 
+API.on(API.USER_JOIN, callback);
+function callback(user)
+{
+alert(user.username + " joined the room");
+}
+
  afkCheck = function() {
     var DJs, id, lastActivity, lastWarned, now, oneMinute, secsLastActive, timeSinceLastActivity, timeSinceLastWarning, twoMinutes, user, warnMsg, _ref, _results;
     _ref = data.users;
