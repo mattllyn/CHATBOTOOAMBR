@@ -380,7 +380,7 @@
 API.on(API.USER_JOIN, callback);
 function callback(user)
 {
-alert(user.username + " joined the room");
+API.sendChat("Bem vindo @" + user.getUser().username + ",  a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."));
 }
 
  afkCheck = function() {
