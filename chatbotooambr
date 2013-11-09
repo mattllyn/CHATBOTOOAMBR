@@ -844,12 +844,12 @@
       msg1 += "Se é novo procure pelo seu nome na sua tela (próximo a cabine do DJ) e depois mude o nome. ";
       msg1 += "Para Ganhar Pontos clique em Bacana. ";
       msg2 = "Para ver os temas permitidos digite: !temas ";
-      msg3 = "Para evitar ser removido da cabine de DJ's por não estar votando, use o Auto-Bacana.";
-      msg3 += "Tutorial: http://migre.me/gA5xV";
-      msg3 += "Divirta-se! Qualquer outra duvida chame um adm da sala.";
+      msg2 += "Para evitar ser removido da cabine de DJ's por não estar votando, use o Auto-Bacana.";
+      msg2 += "Tutorial: http://migre.me/gA5xV";
+      msg2 += "Divirta-se! Qualquer outra duvida chame um adm da sala.";
       API.sendChat(msg1);
       return setTimeout((function() {
-        return API.sendChat(msg2,msg3);
+        return API.sendChat(msg2);
       }), 750);
     };
 
