@@ -846,10 +846,10 @@
       msg2 = "Para ver os temas permitidos digite: !temas ";
       msg3 = "Para evitar ser removido da cabine de DJ's por não estar votando, use o Auto-Bacana.";
       msg3 += "Tutorial: http://migre.me/gA5xV";
-      msg3 += "Divirta-se! Qualquer outra duvida chame um adm da sala ";
+      msg3 += "Divirta-se! Qualquer outra duvida chame um adm da sala.";
       API.sendChat(msg1);
       return setTimeout((function() {
-        return API.sendChat(msg3);
+        return API.sendChat(msg2,msg3);
       }), 750);
     };
 
