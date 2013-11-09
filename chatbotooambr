@@ -874,11 +874,11 @@
     roomHelp2Command.prototype.functionality = function() {
       var msg1, msg2;
       msg1 = "Welcome to the OOAM-BR room! Create a playlist and populate it with songs from either YouTube or Soundcloud.  "
-      msg1+= "Click the 'Join Waitlist' button and wait your turn to play music. Most anime music allowed, type '/themes' for specifics."
+      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. Most anime music allowed, type '/themes' for specifics."
       msg1 += "To obtain points, click woot. ";
       msg2 = "To avoid being removed from the DJ booth's not be voting, use the Auto-Woot.";
-      msg2 + = "Tutorial: http://is.gd/YJVjwA";
-      msg2 + = "Enjoy! any other doubts call the admin of the room";
+      msg2 += "Tutorial: http://is.gd/YJVjwA";
+      msg2 += "Enjoy! any other doubts call the admin of the room";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
