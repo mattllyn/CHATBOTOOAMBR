@@ -766,7 +766,7 @@
       return _ref3;
     }
 
-    SilvoCommand.prototype.init = function() {
+    HebeCommand.prototype.init = function() {
       this.command = '!hebe';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'user';
