@@ -1138,15 +1138,15 @@
     dieCommand.prototype.init = function() {
       this.command = '!desligar';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'cohost';
+      return this.rankPrivelege = 'manager';
     };
 
     dieCommand.prototype.functionality = function() {
-      API.sendChat('Como tu é burro, cara.');
+      API.sendChat('Desligando ChatBot...');
       undoHooks();
-      API.sendChat('Por que fez isso? Que loucura.');
+      API.sendChat('Quase lá...');
       data.implode();
-      return API.sendChat('Agora o chat bot está desligado');
+      return API.sendChat('Agora o chat bot está desligado.');
     };
 
     return dieCommand;
@@ -1164,7 +1164,7 @@
     reloadCommand.prototype.init = function() {
       this.command = '!reload';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'cohost';
+      return this.rankPrivelege = 'manager';
     };
 
     reloadCommand.prototype.functionality = function() {
