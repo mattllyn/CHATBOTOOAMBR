@@ -367,6 +367,12 @@
     return document.getElementById("button-sound").click();
   };
 
+API.on(event, callback);
+function callback(user)
+{
+sendChat("Bem-vindo @" +user.getUser().username + " a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.");
+}
+
   initialize = function() {
     pupOnline();
     populateUserData();
@@ -377,11 +383,6 @@
     return data.startAfkInterval();
   };
 
-API.on(API.USER_JOIN, callback);
-function callback(user)
-{
-API.ChatLog("Bem vindo @" + user.getUser().username + ",  a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."));
-]
  afkCheck = function() {
     var DJs, id, lastActivity, lastWarned, now, oneMinute, secsLastActive, timeSinceLastActivity, timeSinceLastWarning, twoMinutes, user, warnMsg, _ref, _results;
     _ref = data.users;
