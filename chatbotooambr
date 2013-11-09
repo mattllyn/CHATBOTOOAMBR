@@ -849,7 +849,7 @@
       msg3 += "Divirta-se! Qualquer outra duvida chame um adm da sala ";
       API.sendChat(msg1);
       return setTimeout((function() {
-        return API.sendChat(msg2);
+        return API.sendChat(msg3);
       }), 750);
     };
 
