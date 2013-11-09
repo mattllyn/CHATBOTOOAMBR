@@ -370,7 +370,7 @@
 API.on(API.USER_JOIN, callback);
 function callback(user)
 {
-API.sendChat("Bem-vindo @" + user.username + " toque apenas músicas com no máximo 6 minutos. Os temas permitidos são: AMV, K-pop, J-Music, vocaloid, Games Music, Electro e Rock. Siga as regras, e não tenha problemas com nenhum administrador. Divirta-se!"); 
+API.getUser("Bem-vindo @" + user.username + " toque apenas músicas com no máximo 6 minutos. Os temas permitidos são: AMV, K-pop, J-Music, vocaloid, Games Music, Electro e Rock. Siga as regras, e não tenha problemas com nenhum administrador. Divirta-se!"); 
 }
 
   initialize = function() {
