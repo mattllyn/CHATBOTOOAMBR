@@ -377,8 +377,11 @@
     return data.startAfkInterval();
   };
 
-API.sendChat("Bem vindo @" + user.getUser().username + ",  a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."));
-
+API.on(API.USER_JOIN, callback);
+function callback(user)
+{
+API.ChatLog("Bem vindo @" + user.getUser().username + ",  a sala OOAM-BR, para obter ajuda digite: !ajuda(!help). Para ver as regras digite: !regras(!rules). Alguma dúvida contate um Administrador.."));
+]
  afkCheck = function() {
     var DJs, id, lastActivity, lastWarned, now, oneMinute, secsLastActive, timeSinceLastActivity, timeSinceLastWarning, twoMinutes, user, warnMsg, _ref, _results;
     _ref = data.users;
