@@ -471,7 +471,7 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat(mubBot.misc.help);
                     break
 
-                    case "!autowoot":
+                    case "autowoot":
                         API.sendChat("Use auto-woot, não perca nenhum ponto, o auto-woot dá Bacana(Woot) automaticamente. http://goo.gl/YcXZLw");
                     break
 
