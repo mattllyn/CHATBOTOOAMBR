@@ -826,28 +826,28 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Tempo máximo 6 minutos.');
+                        API.sendChat('Tempo máximo 6 minutos. Maximum time 6 minutes.');
                         break;
                     case '2':
-                        API.sendChat('Não escrever em /me ou /em.');
+                        API.sendChat('Não escrever em /me ou /em. Do not write in /me or /em');
                         break;
                     case '3':
-                        API.sendChat('Respeitar os moderadores e os demais players da sala.');
+                        API.sendChat('Respeitar os moderadores e os demais players da sala. Respect the moderators and other players in the room.');
                         break;
                     case '4':
-                        API.sendChat('Sem Flood no chat.');
+                        API.sendChat('Sem Flood no chat. No Flood the chat.');
                         break;
                     case '5':
-                        API.sendChat('Sem vídeos de zoação.');
+                        API.sendChat('Sem vídeos de zoação. No videos troll');
                         break;
                     case '6':
-                        API.sendChat('Não fique pedindo cargos.');
+                        API.sendChat('Não fique pedindo cargos. Do not be asking positions.');
                         break;
                     case '7':
-                        API.sendChat('Ecchi só 00:00 meia noite.');
+                        API.sendChat('Ecchi só 00:00 meia noite. Ecchi only 00:00 midnight.');
                         break;
                     default:
-                        API.sendChat('Não divulgue links de outras salas..');
+                        API.sendChat('Não divulgue links de outras salas. Do not post links to other rooms.');
                         break;
                 }
             }
