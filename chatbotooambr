@@ -649,7 +649,7 @@ botMethods.djAdvanceEvent = function(data){
                                     API.sendChat("@" + botMethods.cleanString(command[1]) + ", toma esse(a) " + mubBot.misc.tacos[randomTaco] + ", sua vadia!");
                                     break;
                                 case 1:
-                                    API.sendChat("@" + botMethods.cleanString(command[1]) + ", rápido! Coma esse(a) " + mubBot.misc.tacos[randomTaco] + " antes que eu faça!");
+                                    API.sendChat("@" + botMethods.cleanString(command[1]) + ", rápido! Coma esse(a) " + mubBot.misc.tacos[randomTaco] + " antes que eu coma!");
                                     break;
                                 case 2:
                                     API.sendChat("Um(a) " + mubBot.misc.tacos[randomTaco] + " para voce, @" + botMethods.cleanString(command[1]) + ". :3");
