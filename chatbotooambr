@@ -13,8 +13,9 @@ toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
 mubBot.misc.Rules = "Tempo máximo 6 minutos. Respeitar os moderadores e os demais players da sala. Sem Flood no chat. Sem vídeos de zoação. Não fique pedindo cargos. Ecchi só 00:00 meia noite. Não divulgue links de outras salas";
+mubBot.misc.Rules2 = "Maximum time 6 minutes. Respect the moderators and other players in the room. No Flood the chat. No videos teasing. Do not be asking positions. Ecchi only 00:00 midnight. Do not disclose links from other rooms.";
 mubBot.misc.Commands = "Nops!"
-mubBot.misc.Themes = "Temas permitidos: AMV, K-pop, J-Music, vocaloid, Games Music, Electro e Rock.";
+mubBot.misc.Themes = ": AMV, K-pop, J-Music, vocaloid, Games Music, Electro e Rock.";
 mubBot.misc.help = "Nops!" //What Help will say
 mubBot.misc.version = "1.0.7";
 mubBot.misc.origin = "Este bot foi criado por Dubstepers, Alexander7370, e Foxdemon143, editado pela equipe OOAM-BR.HTTP  Todos os direitos reservados!";
@@ -461,10 +462,14 @@ botMethods.djAdvanceEvent = function(data){
                     case "regras":
                         API.sendChat("Regras: " + mubBot.misc.Rules);
                     break
-
+                    
+                    case "rules":
+                        API.sendChat("Rules: " + mubBot.misc.Rules2);
+                    break
+                    
                     case "temas":
                     case "tema":
-                        API.sendChat("Temas: " + mubBot.misc.Themes);
+                        API.sendChat("Temas/Themes: " + mubBot.misc.Themes);
                     break
 
                     case "ajuda":
@@ -475,6 +480,10 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat("Use auto-woot, não perca nenhum ponto, o auto-woot dá Bacana(Woot) automaticamente. http://goo.gl/YcXZLw");
                     break
 
+                    case "autowoot2":
+                        API.sendChat("Use auto-woot, do not lose any point, the auto-woot gives Woot automatically. http://goo.gl/8FyC7f");
+                    break
+                    
                     case "commands":
                     case "command":
                         API.sendChat(mubBot.misc.Commands);
@@ -1022,4 +1031,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me : OOAM Script Iniciado'+mubBot.misc.version)
+    API.sendChat('/me : OOAM ChatBot Script Iniciado v'+mubBot.misc.version)
