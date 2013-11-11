@@ -46,7 +46,7 @@ mubBot.settings.removedFilter = true;
 //Redstoner              [DJ-NEON]                  [Redstoner-bot]         [Foxdemon143]
 //mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e", "5214f9e196fba51fda062ea7"];
 
-mubBot.filters.swearWords = ["filho da puta","caralho","penis","penus","fuck","shit","bitch","cunt","twat","faggot","queer","dumbass","pussy","buceta","dick","cocksucker","asshole","vagina","tit","mangina","tits","cock","jerk","puta","puto"];
+mubBot.filters.swearWords = ["Filho da puta", "caralho","chupa meu pinto","Vai Tomar no cu", "Vai se foder", "puta merda", "cú", "cacete", "imbecil", "bicha", "gay","idiota","vagina","Fudeu","pau","motherfucker","seu merda","pau no cu","idiota","puta"];
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey","seu preto","nigga","macaco"];
 
