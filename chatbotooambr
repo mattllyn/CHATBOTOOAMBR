@@ -544,7 +544,7 @@ botMethods.djAdvanceEvent = function(data){
                                 API.sendChat('Cooldown disabled');
                             }else{
                                 mubBot.settings.cooldown = command[1];
-                                API.sendChat('Tempo maximo de minutos alterado para '+mubBot.settings.cooldown+' s');
+                                API.sendChat('Tempo maximo de segundos alterado para '+mubBot.settings.cooldown+' s');
                             }
                         }
                         botMethods.save();
