@@ -260,13 +260,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "liink":
+                    case "adblock":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Our Web - Not Available Yet");
+                            API.sendChat("Para remover os anuncios/propagandas use: http://adblockplus.org/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Our Web - Not Available Yet");
+                            API.sendChat(command[1]+"Para remover os anuncios/propagandas use: http://adblockplus.org/");
                         }else{
-                            API.sendChat("Our Web - Not Available Yet");
+                            API.sendChat("Para remover os anuncios/propagandas use: http://adblockplus.org/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
