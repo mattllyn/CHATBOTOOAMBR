@@ -375,9 +375,9 @@ botMethods.djAdvanceEvent = function(data){
                             API.sendChat("Este comando só pode ser usado por um Bouncer ou Superiores!");
                         }
                         break;
-                    case 'rvf':
+                    case 'fvr':
                     case 'removedfilter':
-                        if(API.getUser(fromID).permission > 1 || mubBot.admins.indexOf(fromID) > -1) mubBot.settings.removedFilter ? API.sendChat("Removed video filter is enabled") : API.sendChat("Removed video is disabled");
+                        if(API.getUser(fromID).permission > 1 || mubBot.admins.indexOf(fromID) > -1) mubBot.settings.removedFilter ? API.sendChat("Filtro de video removido ativado.") : API.sendChat("Filtro de video removido desativado.");
                         break;
                     case 'trvf':
                     case 'toggleremovedfilter':
@@ -471,8 +471,8 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat(mubBot.misc.help);
                     break
 
-                    case "derp":
-                        API.sendChat("Is ThIs DeRpY eNoUgH fOr YoU http://i.imgur.com/MqTfoHg.png");
+                    case "!autowoot":
+                        API.sendChat("Use auto-woot, não perca nenhum ponto, o auto-woot dá Bacana(Woot) automaticamente. http://goo.gl/YcXZLw");
                     break
 
                     case "commands":
@@ -517,7 +517,7 @@ botMethods.djAdvanceEvent = function(data){
                             response = response + " | Tempo máximo de minutos: " + mubBot.settings.maxLength + "m";
                             response = response + " | Segundos: " + mubBot.settings.cooldown + "s";
                             response = response + " | RuleSkip: "+ mubBot.settings.ruleSkip;
-                            response = response + " | Removed Video Filter: "+ mubBot.settings.removedFilter;
+                            response = response + " | Filtro de Video Removido: "+ mubBot.settings.removedFilter;
                             API.sendChat(response);
                         }
                         break;
@@ -1000,7 +1000,7 @@ botMethods.djAdvanceEvent = function(data){
         $.getJSON('http://gdata.youtube.com/feeds/api/videos/'+data.media.cid+'?v=2&alt=jsonc&callback=?', function(json){response = json.data});
         setTimeout(function(){
             if(typeof response === 'undefined' && data.media.format != 2 && mubBot.settings.removedFilter){
-                API.sendChat('/me This video may be unavailable!!');
+                API.sendChat('/me Este vídeo não está disponivel!!');
                 //botMethods.skip();
             }
         }, 1500);
